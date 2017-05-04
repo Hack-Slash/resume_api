@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       get '/students' => 'students#index'
-      get '/students/:id' => 'student#show'
+      get '/students/:id' => 'students#show'
       post '/students' => 'student#create'
       patch '/students/:id' => 'student#update'
       delete '/students/:id' => 'student#destroy'
