@@ -31,6 +31,6 @@ class Api::V1::StudentsController < ApplicationController
   def destroy
     @student = Student.find_by(id: params[:id])
     @student.destroy
-    redirect_to '/students'
+    redirect_to '/api/v1/students'
   end
 end
