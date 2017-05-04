@@ -8,6 +8,7 @@ namespace :api do
     post '/students' => 'student#create'
     patch '/students/:id' => 'student#update'
     delete '/students/:id' => 'student#destroy'
+    get 'students' => 'students#show'
     end
   end
 end
