@@ -55,3 +55,12 @@ end
     student_id: Student.all.sample.id
   )
 end
+
+5.times do
+  Student.all.each do |student|
+    StudentSkill.create(
+      student_id: student.id,
+      skill_id: Skill.all.sample.id
+    )
+  end
+end
