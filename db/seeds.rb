@@ -51,8 +51,7 @@ end
 
 100.times do
   Skill.create(
-    skill_name: Faker::Superhero.power,
-    student_id: Student.all.sample.id
+    skill_name: Faker::Superhero.power
   )
 end
 
