@@ -18,7 +18,7 @@ class Api::V1::StudentsController < ApplicationController
       email: params[:email],
       phone_number: params[:phone_number],
       short_bio: params[:short_bio],
-      linkedin_url: params[:url],
+      linkedin_url: params[:linkedin_url],
       twitter_handle: params[:twitter_handle],
       personal_web_url: params[:personal_web_url],
       online_resume_url: params[:online_resume_url],
@@ -26,5 +26,11 @@ class Api::V1::StudentsController < ApplicationController
       photo: params[:photo]
     )
     render 'show.json.jbuilder'
+  end
+
+  def destroy
+    @student = Student.find_by(id: params[:id])
+    @student.destroy
+    redirect_to '/api/v1/students'
   end
 end
