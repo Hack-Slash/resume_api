@@ -5,6 +5,7 @@ namespace :api do
 
   namespace :v1 do
     get '/students' => 'students#index'
+    get '.students' => 'students#show'
     end
   end
 end
