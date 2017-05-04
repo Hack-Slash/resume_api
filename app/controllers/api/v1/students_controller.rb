@@ -5,4 +5,7 @@ def index
   render 'index.json.jbuilder'
 end
 
+def update
+  @student = Stud
+
 end
