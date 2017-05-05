@@ -25,7 +25,7 @@ class Api::V1::StudentsController < ApplicationController
       photo: params[:photo]
     )
     @student.save
-    redirect_to '/api/v1/students/:id'
+    redirect_to "/api/v1/students/#{@student.id}"
   end
 
   def update
